@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/46fc34228e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-holder">
+        <div class="input-section">
+          <i class="fa-solid fa-clipboard-list"></i>
+          <input
+            type="text"
+            id="input-field"
+            placeholder="Type your todo list"
+          />
+          <i class="fa-solid fa-plus" id="add-item"></i>
+        </div>
+        <div class="edit-list">
+          <div>
+            <i class="fa-solid fa-check-double" style="color: gray"></i>
+            <a href="#" id="complete-all">Complete all tasks</a>
+          </div>
+          <div>
+            <a href="#" id="clear-all">Clear completed</a>
+          </div>
+        </div>
+        <div class="tasklist-container"></div>
+        <div class="footer">
+          <div>
+            <span id="tasks-left">0</span>
+            <span> tasks left</span>
+          </div>
+          <div>
+            <a href="#" id="all">All</a>
+            <a href="#" id="uncomplete">Uncomplete</a>
+            <a href="#" id="complete">Complete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
