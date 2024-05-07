@@ -65,7 +65,13 @@ body {
   background-color: #f0f0f0;
 }
 
-.edit-list, .footer {
+#input-field:focus {
+  background-color: #d0cece;
+  outline: none;
+}
+
+.edit-list,
+.footer {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -73,17 +79,18 @@ body {
   border-bottom: 1px solid #f0f0f0;
 }
 
-.footer{
-    border-top: 1px solid #f0f0f0;
-    border-bottom: none;
-    padding: 5px;
+.footer {
+  border-top: 1px solid #f0f0f0;
+  border-bottom: none;
+  padding: 5px;
 }
 
-.footer span{
-    color: gray;
+.footer span {
+  color: gray;
 }
 
-.edit-list a, .footer a {
+.edit-list a,
+.footer a {
   text-decoration: none;
   color: gray;
   padding: 5px;
@@ -94,43 +101,6 @@ body {
   padding: 5px;
   padding-bottom: 10px;
 }
-
-/*
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.task {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.task label{
-    font-size: xx-large;
-}
-
-input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #333;
-    border-radius: 50%;
-    background-color: #fff;
-  }
-
-.task input[type="checkbox"] {
-  margin-right: 10px;
-}
-
-.checked {
-  text-decoration: line-through;
-  color: #ccc;
-}
-*/
 
 .tasklist-container {
   display: flex;
@@ -197,4 +167,37 @@ input[type="checkbox"]:checked::before {
   color: black;
   position: absolute;
   background-color: gray;
+}
+
+#all:hover,
+#complete:hover,
+#uncomplete:hover,
+#complete-all:hover,
+#clear-all:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#all:focus,
+#complete:focus,
+#uncomplete:focus {
+  text-decoration: underline;
+  color: black;
+}
+
+#complete-all:active,
+#clear-all:active {
+  text-decoration: underline;
+  color: black;
+}
+
+.edit-list,
+.footer {
+  display: none;
+}
+
+.no-item-added {
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 0.4rem;
 }
