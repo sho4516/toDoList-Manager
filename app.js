@@ -88,10 +88,13 @@ function addEventListenerToCheckBox(event, index) {
 }
 
 function addEventListenerToDelete(taskListItemEl, index) {
-  taskListItemEl.remove();
-  tasks.splice(index, 1);
-  setVisibility(editListEl, footerEl, noItemAddedEl);
-  updateTasks();
+  taskListItemEl.classList.add("removed");
+  setTimeout(() => {
+    taskListItemEl.remove();
+    tasks.splice(index, 1);
+    setVisibility(editListEl, footerEl, noItemAddedEl);
+    updateTasks();
+  }, 500);
 }
 
 function updateTasks() {
